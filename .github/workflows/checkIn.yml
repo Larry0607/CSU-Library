@@ -27,13 +27,13 @@ jobs:
         user='${{ secrets.USER }}'
         pwd='${{ secrets.PWD }}'
         python3 helper.py --action 'checkIn' --userid $user --password $pwd
-    - name: Commit
-      run: |
-        git config --global user.email founder.yu@foxmail.com
-        git config --global user.name founder-yu
-        git add .
-        git commit -m "Update library.log" -a
-    - name: Push changes
-      uses: ad-m/github-push-action@master
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
+#     - name: Commit
+#       run: |
+#         git config --global user.email founder.yu@foxmail.com
+#         git config --global user.name founder-yu
+#         git add .
+#         git commit -m "Update library.log" -a
+#     - name: Push changes
+#       uses: ad-m/github-push-action@master
+#       with:
+#         github_token: ${{ secrets.GITHUB_TOKEN }}
